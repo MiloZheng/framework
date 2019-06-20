@@ -1052,7 +1052,7 @@ class Validate
             }
             return true;
         } elseif ($file instanceof File) {
-            return $this->checkSize($file, $rule);
+            return !$this->checkSize($file, $rule);
         }
 
         return false;
